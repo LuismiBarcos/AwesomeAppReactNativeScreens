@@ -44,6 +44,7 @@ export default class App extends Component {
         <LoginScreenlet 
           style={styles.login}
           onLoginSuccess={this._onLoginSuccess.bind(this)}
+          theme={"custom"}
         />
       </View>
     );
