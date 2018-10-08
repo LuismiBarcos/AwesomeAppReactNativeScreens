@@ -108,8 +108,9 @@
 		A632D1DC213FEEF100C93DE7 /* VideoDisplayScreenletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A632D197213FEEF000C93DE7 /* VideoDisplayScreenletView.swift */; };
 		A632D1DD213FEEF100C93DE7 /* FileDisplayScreenletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A632D198213FEEF000C93DE7 /* FileDisplayScreenletView.swift */; };
 		A632D1DE213FEEF100C93DE7 /* PdfDisplayScreenletManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A632D199213FEEF000C93DE7 /* PdfDisplayScreenletManager.swift */; };
-		A63A13ED214FE08800CD3231 /* LoginView_custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63A13EB214FE08700CD3231 /* LoginView_custom.swift */; };
-		A63A13EE214FE08800CD3231 /* LoginView_custom.xib in Resources */ = {isa = PBXBuildFile; fileRef = A63A13EC214FE08700CD3231 /* LoginView_custom.xib */; };
+		A6434A792167948F00F9EE95 /* LoginView_custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6434A762167948E00F9EE95 /* LoginView_custom.swift */; };
+		A6434A7A2167948F00F9EE95 /* LoginView_custom.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6434A772167948E00F9EE95 /* LoginView_custom.xib */; };
+		A6434A7B2167948F00F9EE95 /* logo-xl.png in Resources */ = {isa = PBXBuildFile; fileRef = A6434A782167948E00F9EE95 /* logo-xl.png */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 /* End PBXBuildFile section */
 
@@ -488,8 +489,9 @@
 		A632D197213FEEF000C93DE7 /* VideoDisplayScreenletView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDisplayScreenletView.swift; sourceTree = "<group>"; };
 		A632D198213FEEF000C93DE7 /* FileDisplayScreenletView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDisplayScreenletView.swift; sourceTree = "<group>"; };
 		A632D199213FEEF000C93DE7 /* PdfDisplayScreenletManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PdfDisplayScreenletManager.swift; sourceTree = "<group>"; };
-		A63A13EB214FE08700CD3231 /* LoginView_custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView_custom.swift; sourceTree = "<group>"; };
-		A63A13EC214FE08700CD3231 /* LoginView_custom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView_custom.xib; sourceTree = "<group>"; };
+		A6434A762167948E00F9EE95 /* LoginView_custom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView_custom.swift; sourceTree = "<group>"; };
+		A6434A772167948E00F9EE95 /* LoginView_custom.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView_custom.xib; sourceTree = "<group>"; };
+		A6434A782167948E00F9EE95 /* logo-xl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-xl.png"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		DC466AC15D787D800A281DFF /* Pods_AwesomeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AwesomeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -725,7 +727,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				A63A13EA214FE08700CD3231 /* Custom themes */,
+				A6434A752167948E00F9EE95 /* Custom themes */,
 				A632D13A213FEEEF00C93DE7 /* LiferayScreenlets */,
 				13B07FAE1A68108700A75B9A /* AwesomeApp */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -1027,11 +1029,12 @@
 			path = FileDisplay;
 			sourceTree = "<group>";
 		};
-		A63A13EA214FE08700CD3231 /* Custom themes */ = {
+		A6434A752167948E00F9EE95 /* Custom themes */ = {
 			isa = PBXGroup;
 			children = (
-				A63A13EB214FE08700CD3231 /* LoginView_custom.swift */,
-				A63A13EC214FE08700CD3231 /* LoginView_custom.xib */,
+				A6434A762167948E00F9EE95 /* LoginView_custom.swift */,
+				A6434A772167948E00F9EE95 /* LoginView_custom.xib */,
+				A6434A782167948E00F9EE95 /* logo-xl.png */,
 			);
 			name = "Custom themes";
 			path = "../../DemoThemes/iOS/Custom themes";
@@ -1507,7 +1510,8 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				A632D139213FEEC100C93DE7 /* liferay-server-context.plist in Resources */,
-				A63A13EE214FE08800CD3231 /* LoginView_custom.xib in Resources */,
+				A6434A7A2167948F00F9EE95 /* LoginView_custom.xib in Resources */,
+				A6434A7B2167948F00F9EE95 /* logo-xl.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1701,7 +1705,7 @@
 				A632D1C8213FEEF100C93DE7 /* DDLListScreenletManager.swift in Sources */,
 				A632D1A5213FEEF100C93DE7 /* AssetDisplayScreenletView.swift in Sources */,
 				A632D1B9213FEEF100C93DE7 /* CommentAddScreenletModule.m in Sources */,
-				A63A13ED214FE08800CD3231 /* LoginView_custom.swift in Sources */,
+				A6434A792167948F00F9EE95 /* LoginView_custom.swift in Sources */,
 				A632D1A8213FEEF100C93DE7 /* WebContentListScreenletModule.m in Sources */,
 				A632D1D8213FEEF100C93DE7 /* PdfDisplayScreenletModule.m in Sources */,
 				A632D19D213FEEF100C93DE7 /* RatingScreenletModule.m in Sources */,

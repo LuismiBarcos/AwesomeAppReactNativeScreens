@@ -12,6 +12,11 @@
         android:orientation="vertical"
         >
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:src="@mipmap/logo"/>
+
         <EditText
             android:id="@+id/liferay_login"
             android:layout_width="match_parent"
@@ -20,6 +25,7 @@
             android:drawableLeft="@drawable/default_mail_icon"
             android:drawablePadding="17dp"
             android:drawableStart="@drawable/default_mail_icon"
+            android:hint="@string/email_address"
             android:inputType="text"
             android:labelFor="@+id/liferay_login"
             android:paddingLeft="15dp"
@@ -49,7 +55,7 @@
                 android:id="@+id/liferay_login_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/green_default"
+                android:background="#157EFB"
                 android:text="@string/sign_in"
                 />
 
@@ -63,22 +69,6 @@
                 app:actionViewId="@id/liferay_login_button"
                 />
         </FrameLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <Switch
-                android:id="@+id/switch_save_credentials"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:text="Save crendentials"
-                android:layout_toEndOf="@id/switch_save_credentials"
-                android:layout_toRightOf="@id/switch_save_credentials" />
-        </RelativeLayout>
     </LinearLayout>
 
     <Button
