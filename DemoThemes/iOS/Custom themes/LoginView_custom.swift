@@ -1,30 +1,67 @@
-//
-//  LoginView_custom.swift
-//  iOSScreenlets
-//
-//  Created by Luis Miguel Barco on 27/06/2018.
-//  Copyright © 2018 Luis Miguel Barco. All rights reserved.
-//
+/**
+ * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
+ *
+ * This library is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU Lesser General Public License as published by the Free
+ * Software Foundation; either version 2.1 of the License, or (at your option)
+ * any later version.
+ *
+ * This library is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
+ * details.
+ */
 
 import Foundation
-import UIKit
 import LiferayScreens
 
-class LoginView_custom: LoginView_default {
+class LoginView_liferayphotos: LoginView_default, UITextFieldDelegate {
     
-    @IBAction func checkEmail(_ sender: UITextField) {
-        
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        let isEmail = emailTest.evaluate(with: nullIfEmpty(sender.text))
-                        ? "Valid email"
-                        : "Invalid email"
-        print(isEmail)
+    let blueColor = UIColor(red: 21/255, green: 126/255, blue: 251/255, alpha: 1)
+    
+    override func onCreated() {
+        super.onCreated()
+        setLeftImageToPasswordField()
+        userNameField?.delegate = self
+        passwordField?.delegate = self
+        disableLoginButton()
     }
     
-    @IBAction func saveCredentials(_ sender: UISwitch) {
-        let loginScreenlet = screenlet as? LoginScreenlet
-        loginScreenlet?.saveCredentials = sender.isOn
+    @IBAction func textFieldDidChanged(_ sender: UITextField) {
+        if oneFieldIsEmpty(){
+            disableLoginButton()
+        } else {
+            enableLoginButton()
+        }
+    }
+    
+    // MARK: private methods
+    
+    private func disableLoginButton() {
+        loginButton?.isEnabled = false
+        loginButton?.backgroundColor = UIColor.white
+        loginButton?.layer.borderWidth = 1
+        loginButton?.layer.borderColor = blueColor.cgColor
+        loginButton?.titleLabel?.textColor = blueColor
+        loginButton?.alpha = 0.5
+    }
+    
+    private func enableLoginButton() {
+        loginButton?.isEnabled = true
+        loginButton?.alpha = 1
+        loginButton?.layer.borderWidth = 0
+        loginButton?.backgroundColor = blueColor
+        loginButton?.titleLabel?.textColor = UIColor.white
+    }
+    
+    private func oneFieldIsEmpty() -> Bool {
+        return (userNameField?.text?.isEmpty)! || (passwordField?.text?.isEmpty)!
+    }
+    
+    private func setLeftImageToPasswordField() {
+        let imageView = UIImageView();
+        let image = Bundle.imageInBundles(name: "default-lock-icon", currentClass: type(of: self))
+        imageView.image = image;
+        (passwordField as? DefaultTextField)?.leftImage = image
     }
 }
